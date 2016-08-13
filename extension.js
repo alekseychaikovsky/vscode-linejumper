@@ -1,3 +1,5 @@
+'use strict';
+
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 var vscode = require('vscode');
@@ -13,14 +15,34 @@ function activate(context) {
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
-    var disposable = vscode.commands.registerCommand('extension.sayHello', function () {
-        // The code you place here will be executed every time your command is executed
-
-        // Display a message box to the user
-        vscode.window.showInformationMessage('Hello World!');
+    var moveUp = vscode.commands.registerCommand('extension.moveUp', function () {
+        for (let i = 0; i < 10; i++) {
+            vscode.commands.executeCommand("cursorUp");
+        }
     });
 
-    context.subscriptions.push(disposable);
+    var moveDown = vscode.commands.registerCommand('extension.moveDown', function () {
+        for (let i = 0; i < 10; i++) {
+            vscode.commands.executeCommand("cursorDown");
+        }
+    });
+
+    var selectUp = vscode.commands.registerCommand('extension.selectUp', function () {
+        for (let i = 0; i < 10; i++) {
+            vscode.commands.executeCommand("cursorUpSelect");
+        }
+    });
+
+    var selectDown = vscode.commands.registerCommand('extension.selectDown', function () {
+        for (let i = 0; i < 10; i++) {
+            vscode.commands.executeCommand("cursorDownSelect");
+        }
+    });
+
+    context.subscriptions.push(moveUp);
+    context.subscriptions.push(moveDown);
+    context.subscriptions.push(selectUp);
+    context.subscriptions.push(selectDown);
 }
 exports.activate = activate;
 

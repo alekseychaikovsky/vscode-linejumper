@@ -11,13 +11,52 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.moveUp",
+        "onCommand:extension.moveDown",
+        "onCommand:extension.selectUp",
+        "onCommand:extension.selectDown"
     ],
     "main": "./extension",
     "contributes": {
         "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
+            "command": "extension.moveUp",
+            "title": "Move Up"
+        },
+        {
+            "command": "extension.moveDown",
+            "title": "Move Down"
+        },
+        {
+            "command": "extension.selectUp",
+            "title": "Select Up"
+        },
+        {
+            "command": "extension.selectDown",
+            "title": "Select Down"
+        }],
+        "keybindings": [{
+            "command": "extension.moveUp",
+            "key": "alt+up",
+            "mac": "alt+up",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "extension.moveDown",
+            "key": "alt+down",
+            "mac": "alt+down",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "extension.selectUp",
+            "key": "shift+alt+up",
+            "mac": "shift+alt+up",
+            "when": "editorTextFocus"
+        },
+        {
+            "command": "extension.selectDown",
+            "key": "shift+alt+down",
+            "mac": "shift+alt+down",
+            "when": "editorTextFocus"
         }]
     },
     "scripts": {
