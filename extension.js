@@ -15,26 +15,28 @@ function activate(context) {
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
+    var linesToJump = vscode.workspace.getConfiguration("lineJumper")["linesToJump"]
+
     var moveUp = vscode.commands.registerCommand('extension.moveUp', function () {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < linesToJump; i++) {
             vscode.commands.executeCommand("cursorUp");
         }
     });
 
     var moveDown = vscode.commands.registerCommand('extension.moveDown', function () {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < linesToJump; i++) {
             vscode.commands.executeCommand("cursorDown");
         }
     });
 
     var selectUp = vscode.commands.registerCommand('extension.selectUp', function () {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < linesToJump; i++) {
             vscode.commands.executeCommand("cursorUpSelect");
         }
     });
 
     var selectDown = vscode.commands.registerCommand('extension.selectDown', function () {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < linesToJump; i++) {
             vscode.commands.executeCommand("cursorDownSelect");
         }
     });

@@ -18,6 +18,17 @@
     ],
     "main": "./extension",
     "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Line-Jumper Configuration",
+            "properties": {
+                "lineJumper.linesToJump": {
+                    "type": "integer",
+                    "default": 10,
+                    "description": "Number of lines to jump"
+                }
+            }
+        },
         "commands": [{
             "command": "extension.moveUp",
             "title": "Move Up"
