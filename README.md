@@ -13,10 +13,10 @@ Open your keybindings and adjust the commands you desire. Default keybindings ar
 
 ## Commands
 
-* `extension.moveUp`
-* `extension.moveDown`
-* `extension.selectUp`
-* `extension.selectDown`
+* `lineJumper.moveUp`
+* `lineJumper.moveDown`
+* `lineJumper.selectUp`
+* `lineJumper.selectDown`
 
 ## Extension Settings
 
