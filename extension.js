@@ -17,25 +17,25 @@ function activate(context) {
     // The commandId parameter must match the command field in package.json
     var linesToJump = vscode.workspace.getConfiguration("lineJumper")["linesToJump"]
 
-    var moveUp = vscode.commands.registerCommand('extension.moveUp', function () {
+    var moveUp = vscode.commands.registerCommand('lineJumper.moveUp', function () {
         for (let i = 0; i < linesToJump; i++) {
             vscode.commands.executeCommand("cursorUp");
         }
     });
 
-    var moveDown = vscode.commands.registerCommand('extension.moveDown', function () {
+    var moveDown = vscode.commands.registerCommand('lineJumper.moveDown', function () {
         for (let i = 0; i < linesToJump; i++) {
             vscode.commands.executeCommand("cursorDown");
         }
     });
 
-    var selectUp = vscode.commands.registerCommand('extension.selectUp', function () {
+    var selectUp = vscode.commands.registerCommand('lineJumper.selectUp', function () {
         for (let i = 0; i < linesToJump; i++) {
             vscode.commands.executeCommand("cursorUpSelect");
         }
     });
 
-    var selectDown = vscode.commands.registerCommand('extension.selectDown', function () {
+    var selectDown = vscode.commands.registerCommand('lineJumper.selectDown', function () {
         for (let i = 0; i < linesToJump; i++) {
             vscode.commands.executeCommand("cursorDownSelect");
         }

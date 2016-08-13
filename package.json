@@ -11,10 +11,10 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.moveUp",
-        "onCommand:extension.moveDown",
-        "onCommand:extension.selectUp",
-        "onCommand:extension.selectDown"
+        "onCommand:lineJumper.moveUp",
+        "onCommand:lineJumper.moveDown",
+        "onCommand:lineJumper.selectUp",
+        "onCommand:lineJumper.selectDown"
     ],
     "main": "./extension",
     "contributes": {
@@ -30,41 +30,41 @@
             }
         },
         "commands": [{
-            "command": "extension.moveUp",
+            "command": "lineJumper.moveUp",
             "title": "Move Up"
         },
         {
-            "command": "extension.moveDown",
+            "command": "lineJumper.moveDown",
             "title": "Move Down"
         },
         {
-            "command": "extension.selectUp",
+            "command": "lineJumper.selectUp",
             "title": "Select Up"
         },
         {
-            "command": "extension.selectDown",
+            "command": "lineJumper.selectDown",
             "title": "Select Down"
         }],
         "keybindings": [{
-            "command": "extension.moveUp",
+            "command": "lineJumper.moveUp",
             "key": "alt+up",
             "mac": "alt+up",
             "when": "editorTextFocus"
         },
         {
-            "command": "extension.moveDown",
+            "command": "lineJumper.moveDown",
             "key": "alt+down",
             "mac": "alt+down",
             "when": "editorTextFocus"
         },
         {
-            "command": "extension.selectUp",
+            "command": "lineJumper.selectUp",
             "key": "shift+alt+up",
             "mac": "shift+alt+up",
             "when": "editorTextFocus"
         },
         {
-            "command": "extension.selectDown",
+            "command": "lineJumper.selectDown",
             "key": "shift+alt+down",
             "mac": "shift+alt+down",
             "when": "editorTextFocus"
