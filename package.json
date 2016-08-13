@@ -4,6 +4,14 @@
     "description": "extenstion to jump multiple lines at a time",
     "version": "0.0.1",
     "publisher": "alekseychaikovsky",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alekseychaikovsky/vscode-linejumper.git"
+    },
+    "bugs": {
+        "url": "https://github.com/alekseychaikovsky/vscode-linejumper/issues"
+    },
+    "homepage": "https://github.com/alekseychaikovsky/vscode-linejumper/blob/master/README.md",
     "engines": {
         "vscode": "^1.0.0"
     },
